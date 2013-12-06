@@ -1,0 +1,22 @@
+
+31 & : recode
+recode swap 32 * + : word
+in dup 96 <=? ' rdrop ' word if recur : word
+0 word : word
+
+96 >? ' ret ' rdrop if 9 + : ax
+ax 15 & : ax
+ax swap 16 * + : x
+in dup 48 <? ' rdrop ' x if recur : x
+0 x : x
+
+~ x 1f and def recode
+~ recode swap x 20 mul add def word
+~ in dup x 60 gp if word recur then def word
+~ x 0 word def word
+
+~ x 60 gp if x 9 + then x f and def ax
+~ ax swap x 10 mul add def x
+~ in dup x 30 lp if x recur then def x
+~ x 0 x def x
+

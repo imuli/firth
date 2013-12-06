@@ -1,13 +1,8 @@
-all: 4þ
+all: 4þ.new
 
-4þ: core.o
-	ld -N -o 4þ core.o
-
-4þ.asm: 4þ
-	objdump -d 4þ > 4þ.asm
-
-core.o: core.s
-	as -g -o core.o core.s
+4þ.new: 4þ.þ
+	./4þ < 4þ.þ > 4þ.new
+	chmod +x 4þ.new
 
 clean:
-	rm -f 4þ
+	rm -f 4þ.new
