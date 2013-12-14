@@ -1,8 +1,8 @@
-all: 4þ.new
+all: firth
 
-4þ.new: 4þ.þ
-	./4þ < 4þ.þ > 4þ.new
-	chmod +x 4þ.new
+firth: firth.þ
+	./4þ < firth.þ > firth
+	chmod +x firth
 
 clean:
-	rm -f 4þ.new
+	rm -f firth
