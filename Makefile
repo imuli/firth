@@ -1,8 +1,8 @@
-all: firth newfirth
+all: firth fun
 
-newfirth: firth.fir firth
-	./firth < firth.fir > newfirth
-	chmod +x newfirth
+fun: firth.fun firth
+	./firth < firth.fun > fun
+	chmod +x fun
 
 firth: firth.þ
 	./4þ < firth.þ > firth
